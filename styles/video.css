@@ -1,0 +1,111 @@
+.video-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+
+  padding: 20px;
+  background-color: rgb(249, 249, 249);
+}
+
+@media (max-width: 800px) {
+  .video-preview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-preview-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+  /*.video-preview {
+    
+
+  }*/
+
+  .thumbnail-container {
+    margin-bottom: 12px;
+    position: relative;
+  }
+    .thumbnail {
+      width: 100%;
+    }
+    .video-time {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      position: absolute;
+      right: 8px;
+      bottom: 12px;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+  .video-info-grid {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+  }
+    .profile-picture-container {
+      vertical-align: top;
+      height: fit-content;
+    }
+      .profile-picture {
+        width: 36px;
+        border-radius: 25px;
+      }
+
+    .video-info {
+      position: relative;
+      z-index: 98;
+      width: 220px;
+    }
+      .video-title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+      .video-link {
+        text-decoration: none;
+        color: black;
+      }
+      .video-author, .video-stats {
+        color: rgb(96, 96, 96);
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+.profile-picture-container {
+  position: relative;
+}
+.channel-tooltip {
+  display: flex;
+  position: absolute;
+  background-color: rgb(249, 249, 249);
+  bottom: -70px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  width: 200px;
+  padding: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms;
+}
+.channel-tooltip img {
+  margin-right: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile-picture-container:hover .channel-tooltip {
+  opacity: 1;
+}
